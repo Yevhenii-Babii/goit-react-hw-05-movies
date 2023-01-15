@@ -4,7 +4,7 @@ import { fetchMovieById } from 'components/helpers/api';
 import { useLocation, useParams, Link, Outlet } from 'react-router-dom';
 import css from '../MovieDetails/MovieDetails.module.css';
 
-export const MovieDetails = () => {
+export default function MovieDetails() {
   const [movies, setMovie] = useState({});
   const { movieId } = useParams();
   const location = useLocation();
@@ -37,9 +37,10 @@ export const MovieDetails = () => {
         </div>
         <div>
           <h2>
-            {movies.original_title} ({movies.release_date && movies.release_date.slice(0, 4)})
+            {movies.original_title} (
+            {movies.release_date && movies.release_date.slice(0, 4)})
           </h2>
-          <p>User Score: {Math.ceil((movies.vote_average * 100) /10)} %</p>
+          <p>User Score: {Math.ceil((movies.vote_average * 100) / 10)} %</p>
           <h3>Overview</h3>
           <p>{movies.overview}</p>
           <h3>Genres</h3>
@@ -53,12 +54,18 @@ export const MovieDetails = () => {
       </div>
       <div>
         <h3> Additional infomation</h3>
-        
-            <Link to='cast' className={css.link_details}> Cast </Link>
-            <Link to='reviews' className={css.link_details}> Reviews</Link>
-        
-<Outlet></Outlet>
+
+        <Link to="cast" className={css.link_details}>
+          {' '}
+          Cast{' '}
+        </Link>
+        <Link to="reviews" className={css.link_details}>
+          {' '}
+          Reviews
+        </Link>
+
+        <Outlet></Outlet>
       </div>
     </>
   );
-};
+}

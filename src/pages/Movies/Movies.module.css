@@ -1,16 +1,25 @@
-.searchBar { 
+.searchBar {
   margin-top: 20px;
   padding: 5px;
 }
 
-.wrapper {
-    display: flex;
-    gap: 5px;
-
+.movies_list {
+  list-style: none;
 }
 
 .btnSubmit {
-    display: block;
-    margin-top: 20px;
-    cursor: pointer;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 5px;
+  background-color: beige;
+  border-radius: 4px;
+  border: 1px solid grey;
+}
+
+.link_list {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
