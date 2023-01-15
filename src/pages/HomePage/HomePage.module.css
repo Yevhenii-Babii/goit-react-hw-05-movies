@@ -1,0 +1,15 @@
+.link_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;  
+    font-size: 17px;
+    margin-bottom: 10px;
+} 
+
+.link:hover {
+    color: blue;
+}

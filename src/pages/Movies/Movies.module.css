@@ -1,0 +1,16 @@
+.searchBar { 
+  margin-top: 20px;
+  padding: 5px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 5px;
+
+}
+
+.btnSubmit {
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+}
